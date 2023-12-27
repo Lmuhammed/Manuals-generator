@@ -1,8 +1,10 @@
+<?php include_once "Includes/PHP_helpers/functions.php"; ?>
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
 <title>  cheatSheat Generator - إنتاج الدلائل   </title>
 <link rel="stylesheet" href="Includes/Boostrab/bootstrap.rtl.min.css">
+<link rel="stylesheet" href="Includes/css/style.css">
 <style>
       dialog {
         width: 40%;
@@ -19,29 +21,32 @@
     <label for="stack" class="form-label">إسم اللغة أو التقنية</label>
     <input type="text" class="form-control" id="stack" name="stack" placeholder="python / php / c ...">
     </div>
-    <div class="mb-3 h3">
-    <label for="element_name" class="form-label">إسم العنصر</label>
-    <input type="text" class="form-control" id="element_name" name="element_name" placeholder="دالة while التكرارية">
-    </div>
-    <div class="mb-3 h3">
-    <label for="element_description" class="form-label">وصف العنصر</label>
-    <textarea class="form-control" id="element_description" rows="3" name="element_description" placeholder="تستعمل حلقة while التكرارية لتكرار مجموعة أوامر حتى يتنفذ الشرط المطلوب"></textarea>
-    </div>
-    <div class="mb-3 h3">
-    <label for="element_code" class="form-label">الشيفرة</label>
+    <input type="text" class="form-control mt-3 mb-3"  name="element_name[]" placeholder="إسم العنصر مثال  : while">
+    <input type="text" class="form-control mt-3 mb-3"  name="element_description[]" placeholder="وصف العنصر مثال  : حلقة التكرارية لتكرار مجموعة أوامر حتى يتنفذ الشرط المطلوب">
     <bdo dir="ltr">
-    <textarea class="form-control" id="element_code" rows="3" name="element_code" placeholder="while true :
-//condition "></textarea>
-    <bdo>
+    <textarea class="form-control mt-3 mb-3" id="element_code" name="element_code[]" placeholder="while true : print('h')" rows="3"></textarea>    
+    </bdo>
+    <div id="dynamic_part">
     </div>
-    <div class="text-center fw-bold">
-    <button type="submit" class="btn btn-lg btn-success">إنتاج</button>
+    <div class="text-center fw-bold mt-3 mb-2">
+    <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="submit" class="btn btn-success">إنتاج الدليل </button>
+    <button type="reset" class="btn btn-danger">إلغاء</button>
     </div>
     </form>
-    <p>تحديثات قادمة إن شاء الله</p>
-  <?php
-  echo readfile("Includes/FeatureNextUpdate.txt");
-   ?> 
+    <div class="text-center fw-bold mt-3 mb-2">
+    <div class="btn-group" role="group" aria-label="Basic example">
+    <button type="button" class="btn btn-secondary" onclick="add()">إضافة عناصر جديدة</button>
+    <button type="button" class="btn btn-info"  onclick="remove()">حذف العتاصر</button>
+    </div>
+    </div>
 </div>
+ <!-- <p>تحديثات قادمة إن شاء الله</p> -->
+ <?php
+  #echo readfile("Includes/FeatureNextUpdate.txt");
+  NextUpdates();
+   ?>   
+
+<script src="Includes/JS/main.js"></script>
 </body>
 </html>
