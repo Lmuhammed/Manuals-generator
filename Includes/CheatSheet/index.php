@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
@@ -7,19 +8,32 @@
     <link rel="stylesheet" href="../Boostrab/bootstrap.rtl.min.css">
 </head>
 <body>
-    <div class="container mt-2">
-    <p class="h1 text-center text-success">
+  <div class="container mt-2">
+  <p class="h1 text-center text-success">
     دليل 
-    <b><?php  echo $_POST['stack']; ?></b>
+    <b><?=$_POST["stack"] ?></b>
     <button class="btn btn-warning d-print-none" type="button" onclick="window.print()">طباعة</button>
     </p>
-    <b class="h2 text-info">إسم العنصر</b>
+  <?php
+   /*  echo "<pre>";
+    var_dump($_POST);
+    echo "</pre>";
+    die; */
+    $nb_elemts=count($_POST["element_name"]);
+    $i=(int)0;
+    for ($i=0; $i < $nb_elemts; $i++) { 
+    $element_name=$_POST["element_name"][$i];
+    $element_description=$_POST["element_description"][$i];
+    $element_code=$_POST["element_code"][$i];
+    $Show_nb_element=$i+1;
+    $var = <<< TEXT
+    <b class="h2 text-info"> $Show_nb_element ) إسم العنصر</b>
     <p class="h2">
-    <?php  echo $_POST['element_name']; ?>
+    $element_name
     </p>
     <b class="h2 text-info">وصف العنصر</b>
     <p class="h2">
-    <?php echo $_POST['element_description']; ?>
+    $element_description
     </p>
     <div class="pb-2">
     <b class="h2 text-info">الشيفرة</b>
@@ -29,12 +43,17 @@
     <!-- لتغير اتجاه عرض النصوص ، كون معظم لغات البرمجة بالحروف الاتينية bdo -->
     <bdo dir="ltr">
     <pre class="h3" id="code">
-    <?php  echo $_POST['element_code'];?>
+    $element_code
     </pre>
     </bdo>
     </div>
-    </div>
-    <script>
+    TEXT;
+    echo $var;
+    }
+    
+   ?>
+  </div>
+<script>
 function copyToClipboard() {
   var copyText = document.getElementById("code");
   var range = document.createRange();
