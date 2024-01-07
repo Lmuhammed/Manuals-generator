@@ -3,6 +3,10 @@
 <html dir="rtl" lang="ar">
 <head>
 <title>  cheatSheat Generator - إنتاج الدلائل   </title>
+<!-- icon declaration -->
+<link rel="icon" href="Includes/css/pictures/favicon.ico">
+<!-- Source : https://icon-icons.com/icon/letter-c/34763 -->
+<!-- end icon declaration -->
 <link rel="stylesheet" href="Includes/Boostrab/bootstrap.rtl.min.css">
 <link rel="stylesheet" href="Includes/css/style.css">
 <style>
@@ -12,11 +16,14 @@
     </style>
 </head>
 <body>
-    <div class="container mt-2">
+    <nav>
     <p class="h1 text-center">
     إنتاج الدلائل - Cheatsheet generator
     </p>
+    </nav>
+    <main class="container mt-2">
     <form method="post" action="Includes/CheatSheet/index.php" >
+    <section>
     <div class="mb-3 h3">
     <label for="stack" class="form-label">إسم اللغة أو التقنية</label>
     <input type="text" class="form-control" id="stack" name="stack" placeholder="python / php / c ...">
@@ -33,6 +40,7 @@
     <button type="submit" class="btn btn-success">إنتاج الدليل </button>
     <button type="reset" class="btn btn-danger">إلغاء</button>
     </div>
+    </section>
     </form>
     <div class="text-center fw-bold mt-3 mb-2">
     <div class="btn-group" role="group" aria-label="Basic example">
@@ -40,12 +48,13 @@
     <button type="button" class="btn btn-info"  onclick="remove()">حذف العتاصر</button>
     </div>
     </div>
-</div>
- <!-- <p>تحديثات قادمة إن شاء الله</p> -->
- <?php
-  #echo readfile("Includes/FeatureNextUpdate.txt");
+</main>
+<footer class="text-center">
+<?php
   NextUpdates();
-   ?>   
+?>   
+</footer>
+
 
 <script src="Includes/JS/main.js"></script>
 </body>

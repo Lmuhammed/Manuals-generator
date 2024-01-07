@@ -5,20 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php  echo $_POST['stack'] ."'s CheatSheet"; ?></title>
+    <!-- icon declaration -->
+    <link rel="icon" href="../css/pictures/favicon.ico">
+    <!-- Source : https://icon-icons.com/icon/letter-c/34763 -->
+    <!-- end icon declaration -->
     <link rel="stylesheet" href="../Boostrab/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+
 </head>
 <body>
-  <div class="container mt-2">
+  <nav>
   <p class="h1 text-center text-success">
     دليل 
     <b><?=$_POST["stack"] ?></b>
     <button class="btn btn-warning d-print-none" type="button" onclick="window.print()">طباعة</button>
-    </p>
+  </p>
+  </nav>
+  <main class="container mt-2">
   <?php
-   /*  echo "<pre>";
-    var_dump($_POST);
-    echo "</pre>";
-    die; */
     $nb_elemts=count($_POST["element_name"]);
     $i=(int)0;
     for ($i=0; $i < $nb_elemts; $i++) { 
@@ -52,7 +56,7 @@
     }
     
    ?>
-  </div>
+  </main>
 <script>
 function copyToClipboard() {
   var copyText = document.getElementById("code");
