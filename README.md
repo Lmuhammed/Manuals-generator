@@ -26,7 +26,7 @@ git clone https://github.com/X00Byte/Manuals-generator.git
 - إنقل المشروع إلى ملف خادم الويب 
 مثال خادم أباشي - APACHE SERVER :
 ```bash
-sudo cd cp -R  ./Manuals-generator/ /opt/lampp/htdocs
+sudo cp -R  ./Manuals-generator/ /opt/lampp/htdocs
 ```
 - شغل خادم الويب  
 - إفتح متصفحك المفضل : 
