@@ -16,3 +16,7 @@
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
+input:hover, textarea:hover {
+    background-color: #dfdfdf; /* Change the background color */
+    border: 1px solid #000; /* Add a border */
+ }

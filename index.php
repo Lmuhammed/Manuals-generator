@@ -9,22 +9,17 @@
 <!-- end icon declaration -->
 <link rel="stylesheet" href="Includes/Boostrab/bootstrap.rtl.min.css">
 <link rel="stylesheet" href="Includes/css/style.css">
-<style>
-      dialog {
-        width: 40%;
-      }
-    </style>
 </head>
 <body>
     <nav>
     <p class="h1 text-center">
-    إنتاج الدلائل - Cheatsheet generator
+    إنتاج الدلائل - manual generator
     </p>
     </nav>
     <main class="container mt-2">
-    <form method="post" action="Includes/CheatSheet/index.php" >
+    <form method="post" action="Includes/manual/index.php" >
     <section>
-    <div class="mb-3 h3">
+    <div class="mb-3 h3" style="background-color: yellow;border: 1px solid black;">
     <label for="stack" class="form-label">إسم اللغة أو التقنية</label>
     <input type="text" class="form-control" id="stack" name="stack" placeholder="python / php / c ...">
     </div>
