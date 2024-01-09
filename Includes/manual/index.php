@@ -57,6 +57,9 @@
     
    ?>
   </main>
+  <p class="px-3 py-3 mx-5 my-5 h4 text-center">
+    بكل فخر ،تم الإنتاج بمساعدة <a href="https://github.com/X00Byte/Manuals-generator">Manuals-generator</a>
+  </p>
 <script>
 function copyToClipboard() {
   var copyText = document.getElementById("code");
