@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
-<title>  cheatSheat Generator - إنتاج الدلائل   </title>
+<title>إنتاج الدلائل</title>
 <!-- icon declaration -->
 <link rel="icon" href="Includes/css/pictures/favicon.ico">
 <!-- Source : https://icon-icons.com/icon/letter-c/34763 -->
@@ -11,11 +11,7 @@
 <link rel="stylesheet" href="Includes/css/style.css">
 </head>
 <body>
-    <nav>
-    <p class="h1 text-center">
-    إنتاج الدلائل - manual generator
-    </p>
-    </nav>
+    <?php require_once 'Includes/PHP_helpers/navbar.php'; ?> 
     <main class="container mt-2">
     <form method="post" action="Includes/manual/index.php" >
     <section>
@@ -28,7 +24,7 @@
     <bdo dir="ltr">
     <textarea class="form-control mt-3 mb-3" id="element_code" name="element_code[]" placeholder="while true : print('h')" rows="3"></textarea>    
     </bdo>
-    <div id="dynamic_part">
+    <div id="dynamic_part" class="test">
     </div>
     <div class="text-center fw-bold mt-3 mb-2">
     <div class="btn-group" role="group" aria-label="Basic example">
@@ -49,8 +45,6 @@
   NextUpdates();
 ?>   
 </footer>
-
-
 <script src="Includes/JS/main.js"></script>
 </body>
 </html>

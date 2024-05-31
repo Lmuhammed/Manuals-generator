@@ -1,7 +1,4 @@
-
 var formfield = document.getElementById('dynamic_part');
-// let newDiv = document.createElement('div');
-// newDiv.setAttribute('id','dyn');
 function add(){
   // element name
   var newField = document.createElement('input');
@@ -33,13 +30,15 @@ function add(){
 }
 
 function remove(){
-    console.log("قرييييييييبا ، إن شاء الله ");
-  // var input_tags = formfield.getElementsByTagName('input');
-  // var text = formfield.getElementsByTagName('textarea');
-
-  // if(input_tags.length > 0) {
-  //   formfield.removeChild(input_tags[(input_tags.length) - 1]);
-  //   formfield.removeChild(text[(text.length)-1 ]);
-  // }
+  console.log("قرييييييييبا ، إن شاء الله ");
+  /*
+  var input_tags = formfield.getElementsByTagName('input');
+  var text = formfield.getElementsByTagName('textarea'); 
+  */
+  /* if(input_tags.length > 0) {
+    formfield.removeChild(input_tags[(input_tags.length) - 1]);
+    formfield.removeChild(text[(text.length)-1 ]);
+  } */
+ 
 
 }
