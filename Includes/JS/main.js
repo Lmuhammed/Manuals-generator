@@ -1,44 +1,59 @@
-var formfield = document.getElementById('dynamic_part');
+var dynamic_div = document.getElementById('dynamic_part');
 function add(){
-  // element name
-  var newField = document.createElement('input');
-  newField.setAttribute('type','text');
-  newField.setAttribute('name','element_name[]');
-  newField.setAttribute('class','form-control mt-3 mb-3');
-  newField.setAttribute('placeholder','إسم العنصر مثال  : while');
-  formfield.appendChild(newField);
-   // element descr
-   var newField = document.createElement('input');
-  newField.setAttribute('type','text');
-  newField.setAttribute('name','element_description[]');
-  newField.setAttribute('class','form-control mt-3 mb-3');
-  newField.setAttribute('placeholder','وصف العنصر مثال  : حلقة التكرارية لتكرار مجموعة أوامر حتى يتنفذ الشرط المطلوب');
-  formfield.appendChild(newField);
-   // element code
-  var newField = document.createElement('textarea');
-  newField.setAttribute('name','element_code[]');
-  newField.setAttribute('cols','80');
-  newField.setAttribute('rows','3');
-  newField.setAttribute('maxLength','1000');
-  newField.setAttribute('class','form-control mt-3 mb-3');
-  newField.setAttribute('placeholder','while true : print(\'h\')');
-  newField.setAttribute('id','dynamic');
-  var bdo = document.createElement('bdo');
-  bdo.dir = 'ltr';
-  bdo.appendChild(newField);
-  formfield.appendChild(bdo);
+    var newDiv = document.createElement('div');
+    newDiv.id = "Dynamic_inputs";
+    newDiv.style.border = "1px solid black";
+    newDiv.classList.add("px-2", "py-2" ,"mt-2" ,"mb-2");
+    // element name
+    var newField = document.createElement('input');
+    newField.setAttribute('type','text');
+    newField.setAttribute('name','element_name[]');
+    newField.setAttribute('class','form-control mt-3 mb-3');
+    newField.setAttribute('placeholder','إسم العنصر مثال  : while');
+    newDiv.appendChild(newField);
+    // element descr
+    var newField = document.createElement('input');
+    newField.setAttribute('type','text');
+    newField.setAttribute('name','element_description[]');
+    newField.setAttribute('class','form-control mt-3 mb-3');
+    newField.setAttribute('placeholder','وصف العنصر مثال  : حلقة التكرارية لتكرار مجموعة أوامر حتى يتنفذ الشرط المطلوب');
+    newDiv.appendChild(newField);
+    // element code
+    var newField = document.createElement('textarea');
+    newField.setAttribute('name','element_code[]');
+    newField.setAttribute('cols','80');
+    newField.setAttribute('rows','3');
+    newField.setAttribute('maxLength','1000');
+    newField.setAttribute('class','form-control mt-3 mb-3');
+    newField.setAttribute('placeholder','while true : print(\'h\')');
+    newField.setAttribute('id','dynamic');
+    var bdo = document.createElement('bdo');
+    bdo.dir = 'ltr';
+    bdo.appendChild(newField);
+    newDiv.appendChild(bdo);
+      if (dynamic_div.appendChild) {
+          dynamic_div.appendChild(newDiv);
+      } else {
+        alert('!للأسف تعذر إضافة عنصر جديد ');
+      }
 }
 
 function remove(){
-  console.log("قرييييييييبا ، إن شاء الله ");
-  /*
-  var input_tags = formfield.getElementsByTagName('input');
-  var text = formfield.getElementsByTagName('textarea'); 
-  */
-  /* if(input_tags.length > 0) {
-    formfield.removeChild(input_tags[(input_tags.length) - 1]);
-    formfield.removeChild(text[(text.length)-1 ]);
-  } */
- 
+    var elements = dynamic_div.getElementsByTagName("div"); 
+    var divCount = dynamic_div.getElementsByTagName("div").length;
+    var currentIndex = 0;    
+    if ( currentIndex < divCount ) {
+         if (elements[divCount-1].childNodes.length > 0) {
+            var confirmation = confirm('هل تريد الحذف ؟');
+            if (confirmation) {
+                elements[divCount-1].remove();
+                currentIndex++;
+            } else {
+                alert('! الحذف توقف');
+            }
+        }
+    } else {
+                alert('لايوجد عناصر للحذف.');
+    }
 
 }
