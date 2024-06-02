@@ -1,6 +1,6 @@
 # Manuals-generator
 
-<img src="https://github.com/X00Byte/Manuals-generator/blob/main/repo_background.png" alt="Logo">
+<img src="https://github.com/X00Byte/Manuals-generator/blob/main/Includes/imgs/repo_background.png" alt="Logo">
 <div align="center">
 <h2>
 <p>
@@ -36,10 +36,10 @@ http://localhost/Manuals-generator/
   
 <div align="center">
     هذا المشروع المتواضع لايزال في طفولته المبكرة ، لذا إن إكتشفت خطأ ما:
-   <a href="https://github.com/X00Byte/Manuals-generator/issues">أبلغ عن خطأ</a>    
+   <a href="https://github.com/L-mohamed/PHPmanualsGenerator/issues">أبلغ عن خطأ</a>    
    <br>  
     لديك إقتراح لتطويره أو إضافة ميزة جديدة :
-  <a href="https://github.com/X00Byte/Manuals-generator/issues">أطلب ميزة جديدة</a>
+  <a href="https://github.com/L-mohamed/PHPmanualsGenerator/issues">أطلب ميزة جديدة</a>
 </div>                                                                                       
       
 ## English manual 
@@ -53,7 +53,7 @@ When you learn a programming language, a new technology..., writing down terms a
 3. Usage :
 - Open the terminal in the path you prefer
 ```bash
-git clone https://github.com/X00Byte/Manuals-generator.git
+git clone https://github.com/L-mohamed/PHPmanualsGenerator.git
 ```
 - Move the project to the web server's hosting folder
 Apache server example:
@@ -69,8 +69,8 @@ http://localhost/Manuals-generator/
 
 <div align="center">
    This modest project still in its early stages, so if you spot an error:
-   <a href="https://github.com/X00Byte/Manuals-generator/issues">Report an error</a>    
+   <a href="https://github.com/L-mohamed/PHPmanualsGenerator/issues">Report an error</a>    
    <br>  
    You have a suggestion to develop or add a new feature:
-   <a href="https://github.com/X00Byte/Manuals-generator/issues">Request a new feature</a>
+   <a href="https://github.com/L-mohamed/PHPmanualsGenerator/issues">Request a new feature</a>
 </div>    
