@@ -1,20 +1,20 @@
-<?php include_once "Includes/PHP_helpers/functions.php"; ?>
+<?php include_once "partials/PHP_helpers/functions.php"; ?>
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
 <title>إنتاج الدلائل</title>
 <!-- icon declaration -->
-<link rel="icon" href="Includes/css/pictures/favicon.ico">
+<link rel="icon" href="partials/imgs/favicon.ico">
 <!-- Source : https://icon-icons.com/icon/letter-c/34763 -->
 <!-- end icon declaration -->
-<link rel="stylesheet" href="Includes/Boostrab/bootstrap.rtl.min.css">
-<link rel="stylesheet" href="Includes/css/style.css">
+<link rel="stylesheet" href="partials/Boostrab/bootstrap.rtl.min.css">
+<link rel="stylesheet" href="partials/css/style.css">
 </head>
 <body>
-    <?php require_once 'Includes/PHP_helpers/navbar.php'; ?> 
+    <?php require_once 'partials/PHP_helpers/navbar.php'; ?> 
     <main class="container mt-2">
     <section>
-    <form method="post" action="Includes/manual/index.php" >
+    <form method="post" action="/manual/index.php" >
     <div class="mb-3 h3" style="background-color: yellow;border: 1px solid black;">
     <label for="stack" class="form-label">إسم اللغة أو التقنية</label>
     <input type="text" class="form-control" id="stack" name="stack" placeholder="python / php / c ...">
@@ -42,11 +42,6 @@
     </div>
     </div>
 </main>
-<footer class="text-center">
-<?php
-  NextUpdates();
-?>   
-</footer>
-<script src="Includes/JS/main.js"></script>
+<script src="partials/js/main.js"></script>
 </body>
 </html>

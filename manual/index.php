@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php  echo $_POST['stack'] ."'s CheatSheet"; ?></title>
     <!-- icon declaration -->
-    <link rel="icon" href="../css/pictures/favicon.ico">
+    <link rel="icon" href="../partials/imgs/favicon.ico">
     <!-- Source : https://icon-icons.com/icon/letter-c/34763 -->
     <!-- end icon declaration -->
-    <link rel="stylesheet" href="../Boostrab/bootstrap.rtl.min.css">
-    <link rel="stylesheet" href="../css/style.css">
-
+    <link rel="stylesheet" href="../partials/Boostrab/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="../partials/css/style.css">
 </head>
 <body>
   <nav>
