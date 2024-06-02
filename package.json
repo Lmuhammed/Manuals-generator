@@ -1,0 +1,25 @@
+{
+  "name": "phpmanualsgenerator",
+  "version": "1.0.0",
+  "description": "write down and organize Your information and learning about a technical topic",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/L-mohamed/PHPmanualsGenerator.git"
+  },
+  "keywords": [
+    "php"
+  ],
+  "author": "https://github.com/L-mohamed",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/L-mohamed/PHPmanualsGenerator/issues"
+  },
+  "homepage": "https://github.com/L-mohamed/PHPmanualsGenerator#readme",
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
