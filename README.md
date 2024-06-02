@@ -19,19 +19,37 @@ Easly create educational manuals
 
 3. طريقة التشغيل
 - إفتح الطرفية في المسار الذي تفضلة 
+
 ```bash
 git clone https://github.com/X00Byte/Manuals-generator.git
 ```
-- إنقل المشروع إلى مجلد الإستضافة الخاص بخادم الويب 
-مثال خادم أباشي - APACHE SERVER :
+- ثبت الإعتماديات  - bootstrap
 ```bash
-sudo cp -R  ./Manuals-generator/ /opt/lampp/htdocs
+inpm install 
+```
+- إنقل المشروع إلى مجلد الإستضافة الخاص بخادم الويب 
+مثال خادم أباشي - APACHE SERVER  على xampp:
+
+```bash
+sudo cp -R  ./Manuals-generator/ /opt/lampp/htdocs/
+```
+* أو
+داخل ملف المشروع شغل الخادم المحلي الخاص باللغة 
+
+```bash
+sudo php -S localhost:8000
 ```
 - شغل خادم الويب  
 - إفتح متصفحك المفضل : 
 ```bash
 http://localhost/Manuals-generator/
 ```
+* أو
+في حال إستخدمت الخادم المحلي الخاص باللغة 
+```bash
+http://localhost:8000
+```
+
 4. قدراتك البرمجية الخارقة مطلوبة :
   
 <div align="center">
