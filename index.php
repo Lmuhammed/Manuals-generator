@@ -1,5 +1,4 @@
-<?php //require_once "partials/PHP_helpers/functions.php";
- ?> 
+<?php require_once "partials/PHP_helpers/functions.php"; ?> 
 <!DOCTYPE html>
 <html dir="rtl" lang="ar">
 <head>
@@ -8,7 +7,7 @@
 <link rel="icon" href="partials/imgs/favicon.ico">
 <!-- Source : https://icon-icons.com/icon/letter-c/34763 -->
 <!-- end icon declaration -->
-<link rel="stylesheet" href="partials/Boostrab/bootstrap.rtl.min.css"> 
+<link rel="stylesheet" href="<?php echo npmGetPaths('css'); ?>" > 
 <link rel="stylesheet" href="partials/css/style.css">
 </head>
 <body>
