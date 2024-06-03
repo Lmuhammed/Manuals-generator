@@ -57,3 +57,29 @@ function remove(){
     }
 
 }
+function copyToClipboard() {
+
+    const copyText = document.getElementById("code");
+    // Create a range and select the node
+    const range = document.createRange();
+    range.selectNode(copyText);
+    
+    // Clear any existing selection
+    window.getSelection().removeAllRanges();
+    
+    // Add the range to the selection
+    window.getSelection().addRange(range);
+    
+    // Copy the selected text to the clipboard
+    navigator.clipboard.writeText(window.getSelection().toString())
+      .then(() => {
+        console.log('Text copied to clipboard');
+      })
+      .catch(err => {
+        console.error('Error copying text to clipboard:', err);
+      });
+    
+    // Clear the selection after copying
+    window.getSelection().removeAllRanges();
+    alert('تم نسخ الشفرة إلى الحافظة بنجاح ');
+}

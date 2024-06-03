@@ -6,21 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php  echo $_POST['stack'] ."'s CheatSheet"; ?></title>
     <!-- icon declaration -->
-    <link rel="icon" href="../partials/imgs/favicon.ico">
-    <!-- Source : https://icon-icons.com/icon/letter-c/34763 -->
+    <link rel="icon" href="../partials/imgs/favicon.svg">
+    <!-- Source : https://icons.getbootstrap.com/icons/journal-bookmark-fill/-->
     <!-- end icon declaration -->
     <link rel="stylesheet" href="<?php echo npmGetPaths('css'); ?> "> 
     <link rel="stylesheet" href="../partials/css/style.css">
 </head>
 <body>
-  <nav>
-  <p class="h1 text-center text-success">
-    دليل 
-    <b><?=$_POST["stack"] ?></b>
-    <button class="btn btn-warning d-print-none" type="button" onclick="window.print()">طباعة</button>
-  </p>
-  </nav>
+<?php require_once '../partials/PHP_helpers/navbar.php'; ?> 
   <main class="container mt-2">
+  <div class="row justify-content-center">
+    <div class="col-8 h1 text-center">  
+    دليل  
+    <?=$_POST["stack"] ?>
+    </div>
+    <div class="col-4 d-grid gap-2">
+        <button class="btn btn-success d-print-none" type="button" onclick="window.print()">طباعة</button>
+    </div>
+  </div>
   <?php
     $nb_elemts=count($_POST["element_name"]);
     $i=(int)0;
@@ -30,17 +33,24 @@
     $element_code=$_POST["element_code"][$i];
     $Show_nb_element=$i+1;
     $var = <<< TEXT
-    <b class="h2 text-info"> $Show_nb_element ) إسم العنصر</b>
+    <p class="h2"> عنصر رقم $Show_nb_element </p>
+    <b class="h2 "> إسم العنصر</b>
     <p class="h2">
     $element_name
     </p>
-    <b class="h2 text-info">وصف العنصر</b>
+    <b class="h2">وصف العنصر</b>
     <p class="h2">
     $element_description
     </p>
     <div class="pb-2">
-    <b class="h2 text-info">الشيفرة</b>
-    <button class="btn btn-primary d-print-none" type="button" onclick="copyToClipboard()">نسخ إلى الحافظة</button>
+    <div class="row justify-content-center">
+    <div class="col-8 h2">  
+    الشيفرة
+    </div>
+    <div class="col-4 d-grid gap-2">
+    <button class="btn btn-warning d-print-none" type="button" onclick="copyToClipboard()">نسخ إلى الحافظة</button>
+    </div>
+    </div>
     </div>
     <div class="bg-dark text-success">
     <!-- لتغير اتجاه عرض النصوص ، كون معظم لغات البرمجة بالحروف الاتينية bdo -->
@@ -53,23 +63,11 @@
     TEXT;
     echo $var;
     }
-    
    ?>
-  </main>
-  <p class="px-3 py-3 mx-5 my-5 h4 text-center">
+   <p class="px-2 py-2 mx-2 my-2">
     بكل فخر ،تم الإنتاج بمساعدة <a href="https://github.com/X00Byte/Manuals-generator">Manuals-generator</a>
   </p>
-<script>
-function copyToClipboard() {
-  var copyText = document.getElementById("code");
-  var range = document.createRange();
-  range.selectNode(copyText);
-  window.getSelection().removeAllRanges();
-  window.getSelection().addRange(range);
-  document.execCommand("copy");
-  window.getSelection().removeAllRanges();
-  alert("تم نسخ الشيفرة إلى الحافظة ، قم بعمل شيء رائع :D");
-}
-</script>
+  </main>
+  <script src="../partials/js/main.js"></script>
 </body>
 </html>
